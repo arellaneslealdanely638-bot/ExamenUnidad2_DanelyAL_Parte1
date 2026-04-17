@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Transformaciones Bidimensionales</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      color: #38bdf8;
+    }
+    .box {
+      background: #1e293b;
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 500px;
+      margin: 40px auto;
+      box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    }
+    .shape {
+      width: 100px;
+      height: 100px;
+      background: #22c55e;
+      margin: 20px auto;
+      transition: transform 0.5s ease;
+    }
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+    }
+    button {
+      background: #38bdf8;
+      border: none;
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .info {
+      margin-top: 20px;
+      text-align: left;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Transformaciones Bidimensionales</h1>
+
+<div class="box">
+  <div class="shape" id="figura"></div>
+
+  <div class="buttons">
+    <button onclick="mover()">Mover</button>
+    <button onclick="escalar()">Escalar</button>
+    <button onclick="rotar()">Rotar</button>
+    <button onclick="sesgar()">Sesgar</button>
+  </div>
+
+  <div class="info">
+    <p><b>🔹 Traslación (Mover):</b> Desplaza la figura de un lugar a otro sin cambiar su forma.</p>
+    <p><b>🔹 Escalado:</b> Cambia el tamaño de la figura (más grande o más pequeña).</p>
+    <p><b>🔹 Rotación:</b> Gira la figura sobre su propio eje.</p>
+    <p><b>🔹 Sesgado (Skew):</b> Inclina la figura deformándola en un ángulo.</p>
+  </div>
+</div>
+
+<script>
+  function mover() {
+    document.getElementById("figura").style.transform = "translate(50px, 30px)";
+  }
+
+  function escalar() {
+    document.getElementById("figura").style.transform = "scale(1.5)";
+  }
+
+  function rotar() {
+    document.getElementById("figura").style.transform = "rotate(45deg)";
+  }
+
+  function sesgar() {
+    document.getElementById("figura").style.transform = "skew(20deg, 10deg)";
+  }
+</script>
+
+</body>
+</html>
